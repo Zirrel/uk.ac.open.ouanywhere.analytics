@@ -1,2 +1,2 @@
-uk.ac.open.ouanywhere.analytics
-===============================
+ou-plugin-test
+==============

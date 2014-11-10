@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="uk.ac.open.ouanywhere.analytics" version="1.0.0">
+    <name>Analytics</name>
+    <description>Analytics Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,analytics</keywords>
+    <js-module src="www/analytics.js" name="analytics">
+        <clobbers target="analytics" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Analytics">
+                <param name="ios-package" value="CDVAnalytics"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVAnalytics.h" />
+        <source-file src="src/ios/CDVAnalytics.m" />
+    </platform>
+</plugin>
