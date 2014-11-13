@@ -1,16 +1,11 @@
-cordova.define("uk.ac.open.ouanywhere.analytics", function(require, exports, module) {
-
-	var argscheck = require('cordova/argscheck'),
+var argscheck = require('cordova/argscheck'),
 	    channel = require('cordova/channel'),
 	    utils = require('cordova/utils'),
 	    exec = require('cordova/exec'),
 	    cordova = require('cordova');
 	
-	Analytics.prototype.log = function(successCallback, errorCallback) {
-	    exec(successCallback, errorCallback, "Analytics", "log", []);
-	};
+Analytics.prototype.log = function(successCallback, errorCallback) {
+	exec(successCallback, errorCallback, "Analytics", "log", []);
+};
 	
-	module.exports = new Analytics();
-
-});
-
+module.exports = new Analytics();
