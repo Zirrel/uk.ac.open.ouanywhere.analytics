@@ -17,4 +17,11 @@
         <header-file src="src/ios/CDVAnalytics.h" />
         <source-file src="src/ios/CDVAnalytics.m" />
     </platform>
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Analytics">
+                <param name="android-package" value="uk.ac.open.ouanywhere.analytics"/>
+            </feature>
+        </config-file>
+    </platform>
 </plugin>
