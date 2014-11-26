@@ -7,6 +7,16 @@
 
 @implementation CDVAnalytics {
     NSString *logFile;
+    CDVPluginResult *pluginResult;
+    NSString *callbackID;
+}
+
+-(void)test:(CDVInvokedUrlCommand *)command {
+    callbackID = command.callbackId;
+    
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Analytics"];
+    
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
 -(void)log:(CDVInvokedUrlCommand *)command {
