@@ -18,10 +18,11 @@
         <source-file src="src/ios/CDVAnalytics.m" />
     </platform>
     <platform name="android">
-        <config-file target="config.xml" parent="/*">
+        <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Analytics">
                 <param name="android-package" value="uk.ac.open.ouanywhere.analytics"/>
             </feature>
         </config-file>
+        <source-file src="src/android/Analytics.java" target-dir="src/uk/ac/open/ouanywhere/analytics" />
     </platform>
 </plugin>
